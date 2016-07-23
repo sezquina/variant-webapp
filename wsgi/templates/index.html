@@ -1,0 +1,53 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+      <div class="col-lg-12">
+	<form action="/query" method="POST">
+	  <div class="input-group input-group-lg">
+	    <span class="input-group-addon" id="search-text">Search</span>
+	    <input name="query" type="text" class="form-control" placeholder="by gene, variant, or region" required>
+	    <span class="input-group-btn">
+	      <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+	    </span>
+	  </div>
+	</form>
+      </div>
+
+      <br />
+      
+      <!-- maybe add jumbotron later 
+      <div class="jumbotron">
+	<h1>Jumbotron heading</h1>
+	<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+	<p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div>
+      end jumbotron -->
+
+      <div class="row marketing">
+	<div class="col-lg-8">
+	  <h4>ABraOM</h4>
+	  <p>This databank represents a survey of the genetic diversity of Brazil. Variants were called from 600 exomes across a healthy cohort from Sao Paulo.</p>
+
+	  <p>We offer access to this data via the web form above or programmatically using a REST API. Access is rate limited. Please see the terms of use for more information.</p>
+	  
+	  <h4>Terms of Use</h4>
+	  <p>This data is free for academic use. There is a fee for commercial use.</p>
+
+	  <p>By using this resource you agree to cite the paper below in your work.</p>
+
+	  <p>Author 1, Author 2, and Author 3. ABraOM. <i>Some Journal</i> (2016) 123(99): 91-93</p>
+	</div>
+
+	<div class="col-lg-4">
+	  <h4>News</h4>
+
+	  <i>January 31, 2016</i>
+	  <p>Paper is submitted to journal for review.</p>
+	  
+	  <i>January 9, 2016</i>
+	  <p>Alpha release of the website.</p>
+	</div>
+      </div>
+
+{% endblock %}

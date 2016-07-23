@@ -1,0 +1,48 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+      <div class="col-lg-12">
+	
+	{% if results %}
+	<p>Results: {{ results|length }} </p>
+	{% endif %}
+	<table class="table table-hover table-condensed">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>Chr <span class="caret"></span></th>
+	      <th>Position <span class="caret"></span></th>
+	      <th>Consequence <span class="caret"></span></th>
+	      <th>Annotation <span class="caret"></span></th>
+	      <th>Allele Ct <span class="caret"></span></th>
+	      <th>Allele # <span class="caret"></span></th>
+	      <th># of +/+ <span class="caret"></span></th>
+	      <th>Allele Freq <span class="caret"></span></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    {% for result in results %}
+	    <tr>
+	      <th>{{ loop.index }} </th>
+	      <td>{{ result.Chr }}</td>
+	      <td>{{ result.Start }}</td>
+	      <td>{{ result.Ref }}:{{ result.Alt }}</td>
+	      <td></td>
+	      <td>{{ result.AC }}</td>
+	      <td>{{ result.AN }}</td>
+	      <td></td>
+	      <td>
+		<div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{ result.AF*100.0 }}%">{{ result.AF }}</div>
+		</div>
+	      </td>
+	    </tr>
+	    {% endfor %}
+
+	  </tbody>
+	</table>
+      </div>
+
+{% endblock %}
