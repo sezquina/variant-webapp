@@ -1,0 +1,107 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+      <div class="col-lg-12 col-md-12 col-sm-12">
+	<h4>The Team</h4>
+	
+	<p>Faculty: Maria Rita and Mayana Zatz</p>
+
+	<p>Project Lead: Michel Naslavsky and Guilherme Yamamoto</p>
+
+	<p>Team: Suzana Ezquina, Nam Pho, and Daniel Bozoklian</p>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h4>Ensembl Genes</h4>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-sm-4">
+	<img src="{{ url_for('static', filename='img/ensgenefunc.png') }}" />
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6" style="text-align: right;">
+	<p>
+	  intronic <br />
+	  exonic <br />
+	  UTR3 <br />
+	  ncRNA_intronic <br />
+	  UTR5 <br />
+	  ncRNA_exonic <br />
+	  upstream <br />
+	  downstream <br />
+	  intergenic <br />
+	  exonic;splicing <br />
+	  upstream;downstream <br />
+	  splicing <br />
+	  UTR5;UTR3 <br />
+	  ncRNA_exonic;splicing <br />
+	  ncRNA_splicing <br />
+	  ncRNA_UTR5 <br />
+	</p>
+      </div>
+
+      <div class="col-lg-2 col-md-2 col-sm-2">
+	1,307,192 <br />
+	411,802 <br />
+	213,853 <br />
+	142,438 <br />
+	87,684 <br />
+	67,263 <br />
+	58,191 <br />
+	44,552 <br />
+	30,144 <br />
+	7,511 <br />
+	5,650 <br />
+	4,125 <br />
+	896 <br />
+	844 <br />
+	423 <br />
+	5 <br />
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h4>Regulatory Regions</h4>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+	<img src="{{ url_for('static', filename='img/regulatory.png') }}" />
+      </div>      
+      
+      <div class="col-lg-6 col-md-6 col-sm-6" style="text-align: right;">
+	N/A <br />
+	promoter_flanking_region <br />
+	enhancer <br />
+	promoter <br />
+	CTCF_binding_site <br />
+	open_chromatin_region <br />
+	TF_binding_site <br />
+	promoter_flanking_region;CTCF_binding_site <br />
+	enhancer;CTCF_binding_site <br />
+	CTCF_binding_site;promoter_flanking_region <br />
+	CTCF_binding_site;enhancer <br />
+	promoter;CTCF_binding_site <br />
+	CTCF_binding_site;promoter <br />
+	promoter_flanking_region;CTCF_binding_site;CTCF_binding_site <br />
+	promoter_flanking_region;promoter_flanking_region <br />
+      </div>
+      
+      <div class="col-lg-2 col-md-2 col-sm-2">
+	1,983,037 <br />
+	145,406 <br />
+	61,006 <br />
+	57,676 <br />
+	55,524 <br />
+	40,698 <br />
+	17,753 <br />
+	12,704 <br />
+	2,845 <br />
+	2,689 <br />
+	1,362 <br />
+	1,298 <br />
+	434 <br />
+	117 <br />
+	24 <br />
+      </div>
+	
+{% endblock %}
