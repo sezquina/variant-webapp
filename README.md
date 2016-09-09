@@ -1,6 +1,7 @@
 # variant-webapp
 Testing a basic web application to display genetic variants from a VCF file.
 
+Stating modifications
 ```
 # move pipeline vcf2 to clean db vcf2
 cut -f 1-43 AbraOM-hg19-test.vcf2 > purged.csv # remove patients
