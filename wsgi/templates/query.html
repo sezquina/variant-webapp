@@ -30,8 +30,11 @@
 	      <th>#</th>
 	      <th>Position <span class="caret"></span></th>
 	      <th>Change <span class="caret"></span></th>
+	      <th>Gene <span class="caret"></span></th>
 	      <th>Annotation <span class="caret"></span></th>
+	      <th>Consequence <span class="caret"></span></th>
 	      <th>FILTER <span class="caret"></span></th>
+	      <th>Allele Count/Allele Number <span class="caret"></span></th>
 	      <th>Allele Freq. [AC:AN] <span class="caret"></span></th>
 	    </tr>
 	  </thead>
@@ -42,16 +45,19 @@
 	      <th>{{ loop.index }} </th>
 	      <td>chr{{ result.Chr }}:{{ result.Start }}</td>
 	      <td>{{ result.Ref }}:{{ result.Alt }}</td>
-	      <td>
-		{{ result.Gene_refGene }} <br />
-		{{ result.Gene_ensGene }} <br />
+	      <td>{{ result.Gene_refGene }} <td />
+	      <td>{{ result.Gene_ensGene }} <br />
 		{{ result.avsnp144 }} <br />
 		{{ result.Func_refGene }} <br />
 		{{ result.Regulatory }}
 	      </td>
+	      <td>{{result.AAChange.ensGene }} <br/>
+		{{result.AAChange.resGene}}
+	      </td>
 	      <td>
 	      	{{ result.FILTER }} <br />
 	      </td>
+		<td>{{result.AC}} / {{result.AN}}</td>
 	      <td>
 		<div class="progress">
 		  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{ result.AF*100.0 }}%">{{ result.AF }} [{{ result.AC }}:{{ result.AN }}]</div>
